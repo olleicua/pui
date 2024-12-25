@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.narrow-screen {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .ui {
+    display: none;
+  }
+
+  .narrow-screen {
+    display: block;
+  }
+}
+
+.controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  border-bottom: 4px double #555;
+}
+
+.split-view {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 34px);
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: calc(30vw - 8px);
+}
+
+.instructions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: calc(70vw - 8px);
+}
+
+.divider {
+  position: absolute;
+  bottom: 0;
+  left: calc(30vw - 2px);
+  top: 0;
+  width: 4px;
+  background: #555;
+  border-left: 6px solid #fff;
+  border-right: 6px solid #fff;
+  margin-left: -6px;
+  cursor: col-resize;
+}
+
+.divider:hover {
+  border-left: 6px solid #ddd;
+  border-right: 6px solid #ddd;
+}
